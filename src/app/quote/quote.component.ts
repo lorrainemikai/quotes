@@ -18,7 +18,15 @@ export class QuoteComponent implements OnInit {
 
   ]
 
-  constructor() { }
+  constructor() {
+    addNewQuotes(this.quotes){
+      let quoteLength = this.quotes.length;
+      quote.id=quoteLength+1;
+      this.quotes.push(quotes)
+
+
+    }
+   }
 
   ngOnInit() {
   }
