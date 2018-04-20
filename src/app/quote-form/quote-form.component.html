@@ -4,15 +4,17 @@
       <!-- quote form -->
       <div class="form-group">
         <label for="quote">quote</label>
-        <input type="text"  class="form-control" id="quote" [(ngModel)]="newQuote.quote" quote="quote" #quote=[(ngModel)] required>
-          <div [hidden]="quote.valid||Pristine">
+        <input type="text" required class="form-control" id="quote" [(ngModel)]="newQuote.quote" name="quote" #quote="ngModel">
+            <!--Testing  to see if we get data-->
+                Display {{newQuote.quote}}
+          <div [hidden]="quote.valid||quote.Pristine">
           <P>QUOTE IS REQUIRED</P>
           </div>
           </div>
           <!-- AUTHOR INPUT -->
           <div class="form-group">
       <label for="author">author</label>
-       <input type="text"  class="form-control" id="author" [(ngModel)]= "newQuote.quote" author="author" #quote>
+       <input type="text"  class="form-control" id="author" [(ngModel)]= "newQuote.author" name="author" #author="ngModel">
       </div>
        <div class="row"></div>
         <button type="submit" class="btn btn-danger btn-md">ADD QUOTE</button>
