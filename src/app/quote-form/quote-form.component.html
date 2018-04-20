@@ -1,0 +1,21 @@
+<div class="container fluid">
+  <div class="row">
+    <form #quoteForm = 'ngForm'>
+      <!-- quote form -->
+      <div class="form-group">
+        <label for="quote">quote</label>
+        <input type="text"  class="form-control" id="quote" [(ngModel)]="newQuote.quote" quote="quote" #quote="ngModel" required>
+          <div [hidden]="quote.valid||Pristine">
+          <P>QUOTE IS REQUIRED</P>
+          </div>
+          </div>
+          <!-- AUTHOR INPUT -->
+          <div class="form-group">
+      <label for="author">author</label>
+       <input type="text"  class="form-control" id="author" [(ngModel)]= "newQuote.quote" author="author" #quote>
+      </div>
+       <div class="row"></div>
+        <button type="submit" class="btn btn-danger btn-md">ADD QUOTE</button>
+    </form>
+  </div>
+</div>
