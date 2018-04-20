@@ -1,3 +1,9 @@
-<p>
-  quote works!
-</p>
+<h1>AMAZING QUOTES</h1>
+<hr>
+
+<ul>
+  <div *ngFor='let quote of quotes'>
+    <li>{{quote.name}}</li>
+    <app-quote-details [quotes]='quote'></app-quote-details>
+  </div>
+</ul>
