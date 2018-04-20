@@ -1,10 +1,10 @@
 <div class="container fluid">
   <div class="row">
-    <form  (ngSubmit)="submitGoal()"#quoteForm = 'ngForm'>
+    <form  (ngSubmit)="submitGoal()" #quoteForm = 'ngForm'>
       <!-- quote form -->
       <div class="form-group">
         <label for="quote">quote</label>
-        <input type="text"  class="form-control" id="quote" [(ngModel)]="newQuote.quote" quote="quote" #quote="ngModel" required>
+        <input type="text"  class="form-control" id="quote" [(ngModel)]="newQuote.quote" quote="quote" #quote=[(ngModel)] required>
           <div [hidden]="quote.valid||Pristine">
           <P>QUOTE IS REQUIRED</P>
           </div>

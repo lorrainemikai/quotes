@@ -8,21 +8,10 @@
 <ul>
   <div *ngFor='let quote of quotes'>
     <li>{{quote.name}}</li>
+    <button class="btn btn-primary" (click)='upvote()'>upvote</button>{{quote.upvote}}
+    <button class="btn btn-danger" (click)='downvote()'>downvote</button>{{quote.downvote}}
     <app-quote-details [quotes]='quote'></app-quote-details>
 
   </div>
-  <div class="row">
-    <div class="col-md-6">
-        <a href (click)="LikeVote()">
-            <i class="arrow up icon"></i>
-              I TOTALLY LOVE YOUR QUOTE!!!!
-            </a>
-    </div>
-    <div class="COL-md-6">
-        <a href (click)="HateVote()">
-            <i class="arrow up icon"></i>
-              I HATE THAT QUOTE!
-            </a>
-    </div>
-  </div>
+
 </ul>
