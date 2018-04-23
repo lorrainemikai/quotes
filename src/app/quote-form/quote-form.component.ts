@@ -9,7 +9,7 @@ import { Quote } from '@angular/compiler';
 export class QuoteFormComponent implements OnInit {
   
   newQuotes: any;
-  newQuote=new Quotes (0,'','',0,0);
+  newQuote=new Quotes (0,'','',0,0,new Date())
   @Output() addQuote=new EventEmitter<Quote>();
   submitQuote(){
     this.addQuote.emit(this.newQuotes);  }

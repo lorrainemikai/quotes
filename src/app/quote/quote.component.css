@@ -1,5 +1,5 @@
 /*affect the font within the box*/
-p {
+/* p {
     text-align:center;
     background-color: linen;
     height: 50px;
@@ -7,33 +7,33 @@ p {
     font-family: cursive;
   }
   
-  /*The colours around the quotes*/
-  .w3-card {
+  /* The colours around the quotes */
+  /* .w3-card {
     background-color: green;
     padding:20px;
     padding-bottom: 10px;
     opacity: 0.8;
   }
-  
+   */
   /*The text above the new quote form*/
-  h2 {
+  /* h1 {
     text-align: center;
     font-family: fantasy;
-  }
+  } */
   
   /*new quote form*/
-  form {
+  /* form {
     padding-bottom: 30px;
     text-align: center;
     padding-top: 20px;
   }
-  
+   */
   /*Delete Button*/
-  #danger{
+  /* #danger{
     padding-bottom: 10px;
     margin-left: 50px;
   }
   
   body {
     background-color: whitesmoke;
-  }
+  } */
