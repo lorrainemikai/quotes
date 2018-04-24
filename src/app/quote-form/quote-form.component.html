@@ -3,18 +3,18 @@
     <form  (ngSubmit)="submitQuote(quoteForm)" #quoteForm = 'ngForm' id="quoteFrm">
       <!-- quote form -->
       <div class="form-group">
-        <label for="quote">Quote</label>
-        <input type="text" required class="form-control" id="quote" [(ngModel)]="newQuotes.quote" name="quote" #quote="ngModel">
+        <label for="name">Quote</label>
+        <input type="text" required class="form-control" id="name"   name="name" ngModel>
             <!--Testing  to see if we get data-->
-                Display {{newQuotes.quote}}
-          <div [hidden]="quote.valid||quote.Pristine">
+                <!-- Display {{newQuote.quote}} -->
+          <!-- <div [hidden]="name.valid||name.Pristine">
           <P>QUOTE IS REQUIRED</P>
-          </div>
+          </div> -->
           </div>
           <!-- AUTHOR INPUT -->
           <div class="form-group">
-      <label for="name">author</label>
-       <input type="text"  class="form-control" id="name" [(ngModel)]= "newQuote.name" name="name" #name="ngModel">
+      <label for="author">author</label>
+       <input type="text"  class="form-control" id="author"  name="author" ngModel>
       </div>
        <div class="row"></div>
         <button type="submit" class="btn btn-danger btn-md">ADD QUOTE</button>

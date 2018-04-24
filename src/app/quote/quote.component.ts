@@ -8,7 +8,7 @@ import{ Quotes}from '../quotes'
 export class QuoteComponent implements OnInit {
   quotes = [
     new Quotes (1,'I dont trust easily but when i trust you dont make me regret it.','BY IAN SOMEHALDER~VD',0,0,new Date(2018,3,14)),
-    new Quotes (2,'Ive been in love its painful pointless and overrated','BY IAN SOMEHALDER~VD',0,0,new Date(2018,3,14)),
+  //   new Quotes (2,'Ive been in love its painful pointless and overrated','BY IAN SOMEHALDER~VD',0,0,new Date(2018,3,14)),
     // new Quotes ( 3,'if youre going to be bad be bad with a reason or else youre not worth forgiving','BY IAN SOMEHALDER'),
     // new Quotes (4,'Our fate lives within us.We just need to be brave to see it','BY MERIDA~BRAVE'),
     // new Quotes (5,'humanity is my greatest weakness','BY NINA DOBREV~VD'),
@@ -32,10 +32,11 @@ export class QuoteComponent implements OnInit {
   downvote(){
     this.quotes[0].downvotes --
   }
-  addNewQuotes(quotes){
-    let quoteLength = this.quotes.length;
-    quotes.id=quoteLength+1;
-    this.quotes.push(quotes)
+  addNewQuotes(q){
+    this.quotes = q
+    // let quoteLength = this.quotes.length;
+    // quotes.id=quoteLength+1;
+    // this.quotes.push(quotes)
     }
   constructor() { }
 
