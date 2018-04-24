@@ -11,8 +11,11 @@ export class QuoteFormComponent implements OnInit {
   newQuotes: any;
   newQuote=new Quotes (0,'','',0,0,new Date())
   @Output() addQuote=new EventEmitter<Quote>();
-  submitQuote(){
-    this.addQuote.emit(this.newQuotes);  }
+  submitQuote(newEntry){
+    var entry = new Quotes(newEntry.value.id++,newEntry.value.name,newEntry.value.description,0,0,new Date())
+    this.addQuote.emit(newEntry.entry); 
+    console.log(entry) 
+  }
 
   constructor() { 
    }
