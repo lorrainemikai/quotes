@@ -6,13 +6,15 @@
   </div>
 </div>
 
-  <div *ngFor='let quote of quotes;let i=index'>
-    <li>{{quote.name}} done on {{quote.compeleteDate|date}}</li>
-    <button (click)='toggleDetails(i)'>show more</button>
-    <button class="btn btn-primary" (click)='upvote()'>upvote</button>{{quote.upvotes}}
-    <button class="btn btn-danger" (click)='downvote()'>downvote</button>{{quote.downvotes}}
-    <app-quote-details *ngIf=quote.showDescripton [quotes]='quote' (isCompelete)='compeleteGoal($event,i)'></app-quote-details>
-      
-
+<div *ngFor='let quote of quotes;let i=index' class="style">
+  <li>{{quote.name}} done on {{quote.compeleteDate|date}}</li>
+  <button class="btn" (click)='toggleDetails(i)'>show me </button>
+  <button class="btn btn-primary" (click)='upvote(i)'>
+    <i class="fa fa-thumbs-up fa-2x"></i>
+  </button>{{quote.upvotes}}
+  <button class="btn btn-danger" (click)='downvote(i)'>
+    <i class="fa fa-thumbs-down fa-2x"></i>
+  </button>{{quote.downvotes}}
+  <app-quote-details *ngIf=quote.showDescription [myQuotes]='quote' (isCompelete)='compeleteGoal($event,i)'></app-quote-details>
 </div>
-
+<br><br>

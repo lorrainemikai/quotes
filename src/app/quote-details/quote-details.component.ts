@@ -6,10 +6,10 @@ import {Quotes}from '../quotes'
   styleUrls: ['./quote-details.component.css']
 })
 export class QuoteDetailsComponent implements OnInit {
-  
-  
-  @Input() quotes:Quotes
-  @Output()isCompelete = new EventEmitter <boolean>();
+
+  @Input() myQuotes:Quotes
+  @Output() isCompelete = new EventEmitter <boolean>();
+
   goalCompelete(compelete:boolean){
     this.isCompelete.emit(compelete);
   }

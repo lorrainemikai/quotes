@@ -15,22 +15,22 @@ export class QuoteComponent implements OnInit {
     // new Quotes (6,'When you lose someone it stays with you.Always reminding you of how easy it is to get hurt','BY NINA DOBREV~VD'),
     // new Quotes (7,'The worst day of loving someone us the day you lose them','BY NINA DOBREV~VD'),
     // new Quotes (8,'The day you say you started living is the day you do the thing youre mostly afraid of','BY CLAIRE HOLT~VD'),
-
-
   ];
   compeleteQuote(isCompelete,index){
     if(isCompelete){
       this.quotes.splice(index,1)
     }
   }
-  toggleDetails(index){this.quotes[index].showDescription=!this.quotes[index].showDescription
+  toggleDetails(index){
+    this.quotes[index].showDescription=!this.quotes[index].showDescription;
+    console.log("Heeey")
   }
 
-  upvote(){
-    this.quotes[0].upvotes ++
+  upvote(index){
+    this.quotes[index].upvotes ++
   }
-  downvote(){
-    this.quotes[0].downvotes --
+  downvote(index){
+    this.quotes[index].downvotes ++
   }
   addNewQuotes(q){
     this.quotes = q

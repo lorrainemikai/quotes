@@ -1,5 +1,16 @@
 # Quotes
 
+##built using
+angular js
+bootstrap
+html
+css
+##built by
+lorraine rono chepkemoi
+###about
+this is a web application that allows you to print out your own quotes.also people are allowed to vote if they like your quotes or not
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
 
 ## Development server
